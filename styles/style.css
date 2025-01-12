@@ -39,6 +39,7 @@ body {
   background-color: rgb(12, 12, 12);
   border-radius: 32px;
   padding: 10px 16px;
+  margin: 8px;
   transition: all 0.666s cubic-bezier(0.06, 0.98, 0.41, 0.93);
 }
 #container .content .buttonStyle:hover {
