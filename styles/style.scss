@@ -6,7 +6,7 @@ $fontBold: Rubik Mono One;
 // colors
 $colorOffWhite: rgb(215,215,215);
 $colorPurple: rgb(120,70,120);
-// animations
+// anim
 $animTransition1: all 0.666s cubic-bezier(0.06, 0.98, 0.41, 0.93);
 
 body {
@@ -56,7 +56,6 @@ body {
             color: rgb(235,235,235);
             border: 3px inset rgba(235,235,235,0.7);
             background-color: rgb(20,20,20);
-            transform: scale(1.015);
         }
     }
 }

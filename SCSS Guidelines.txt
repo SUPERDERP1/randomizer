@@ -1,0 +1,43 @@
+These are the guidelines for editing SASS/SCSS for this project
+Written by 5Stygian, Design Lead
+
+VARIABLES
+===========================================================
+General Guidelines
+1| If you are going to use a value more than once, declare it as a variable
+2| Define the variable in the correct category
+
+Naming Guidelines
+1| Always use camel case 
+2| Always name variables with the category as the first word 
+Example: 
+// color
+$colorRed: rgb(255,0,0);
+$colorBlue: rgb(0,0,255);
+
+Defining Guidelines
+1| When defining colors, rgb() is preferred but you can use any color format  
+===========================================================
+
+EDITING 
+===========================================================
+General Guidelines
+1| Unless absolulely required, define classes in 
+#container {
+    .content {
+
+    }
+}
+2| Edits that apply to the whole class must come before defining children
+Example: 
+#container {
+    .content {
+        color: $colorRed;
+        font-size: 18px;
+        h1 {
+            color: $colorBlue;
+            margin: auto;
+        }
+    }
+}
+===========================================================
