@@ -1,3 +1,7 @@
+
+
+
+
 function displayRandomNumbers() {
     let count = 0;
     const interval = setInterval(() => {
@@ -10,4 +14,4 @@ function displayRandomNumbers() {
     }, 5);
 }
 
-displayRandomNumbers();
+document.getElementById('randomize').addEventListener('click', displayRandomNumbers);
