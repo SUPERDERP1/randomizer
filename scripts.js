@@ -15,13 +15,13 @@ function displayRandomNumbers() {
         count++;
        
         clearInterval(interval);
-        if (count >= 45) {
-            intervalTime += 9;
+        if (count >= 35) {
+            intervalTime *= 1.5;
             if (count = 65) {
                 return;
             }
         } else {
-            intervalTime += 5.75;
+            intervalTime += 2.75;
         }
         interval = setInterval(generateNumber, intervalTime);
     }
