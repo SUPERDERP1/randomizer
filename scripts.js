@@ -1,11 +1,13 @@
-
-
-
-
 function displayRandomNumbers() {
     let count = 0;
+    const generatedNumbers = new Set();
     const interval = setInterval(() => {
-        const randomNumber = Math.floor(Math.random() * 100); // Generate a random number between 0 and 99
+        let randomNumber;
+        do {
+            randomNumber = Math.floor(Math.random() * 100); // Generate a random number between 0 and 99
+        } while (generatedNumbers.has(randomNumber));
+        
+        generatedNumbers.add(randomNumber);
         console.log(randomNumber);
         count++;
         if (count === 25) {
