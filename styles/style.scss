@@ -60,3 +60,9 @@ body {
         }
     }
 }
+
+@keyframes fade {
+    0% {background-color: rgb(28,28,28);}
+    50% {background-color: rgb(255,255,255);}
+    100% {background-color: rgb(28,28,28);}
+}
