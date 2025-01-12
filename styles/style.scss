@@ -22,7 +22,7 @@ body {
         }
         .randomizeButton {
             color: $colorOffWhite;
-            border: 1.5px inset rgba(235,235,235,0.7);
+            border: 2.5px inset rgba(235,235,235,0.7);
             background-color: rgb(12,12,12);
             border-radius: 32px;
             padding: 10px 16px;
@@ -30,9 +30,9 @@ body {
         }
         .randomizeButton:hover {
             color: rgb(235,235,235);
-            border: 1.5px outset rgba(235,235,235,0.7);
+            border: 2.5px outset rgba(235,235,235,0.7);
             background-color: rgb(20,20,20);
-            transform: scale(1.01);
+            transform: scale(1.03);
         }
     }
 }
