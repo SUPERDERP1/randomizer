@@ -30,7 +30,6 @@ function displayRandomNumbers() {
 function bgFade(){
     document.body.style.backgroundColor = '#fff';
     document.getElementById('container').style.color = '#000';
-    interval = setInterval(() => {console.log('test'); clearInterval(interval);},200);
     document.body.style.backgroundColor = 'rgb(28,28,28)'; 
     document.getElementById('container').style.color = 'rgb(215,215,215)';
 }
