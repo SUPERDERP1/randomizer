@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-.container .content {
-  color: Rubik;
+.container {
+  color: rgb(215, 215, 215);
+  background-color: rgb(28, 28, 28);
   font-family: Rubik;
   font-size: 16px;
 }
