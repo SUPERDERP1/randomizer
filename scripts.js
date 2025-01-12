@@ -41,8 +41,8 @@ function sleep(ms) {
 }
 
 function bgFade(){
-    document.body.style.animation = "fade 2s cubic-bezier(0.06, 0.98, 0.41, 0.93) 0s 1";
-    sleep(2000).then(() => {document.body.style.animation = "";});
+    document.body.style.animation = "fade 4s cubic-bezier(0.06, 0.98, 0.41, 0.93) 0s 1";
+    sleep(4500).then(() => {document.body.style.animation = "";});
 }
 
 document.getElementById('randomize').addEventListener('click', displayRandomNumbers);
