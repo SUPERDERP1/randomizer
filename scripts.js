@@ -13,7 +13,7 @@ function displayRandomNumbers() {
         if (count === 25) {
             clearInterval(interval);
         }
-    }, 5);
+    }, 100);
 }
 
 document.getElementById('randomize').addEventListener('click', displayRandomNumbers);
