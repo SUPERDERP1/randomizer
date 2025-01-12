@@ -16,10 +16,10 @@ function displayRandomNumbers() {
        
         clearInterval(interval);
         if (count >= 25) {               //og value: 25
-            intervalTime *= 1.001;        //og value: += 5
+            intervalTime *= 1.001;       //og value: += 5
             console.log("count >= 35");
             if (count = 35) {   
-                console.log("finished");         //og value: 45
+                console.log("finished"); //og value: 45
                 return;
             }
         } else {
