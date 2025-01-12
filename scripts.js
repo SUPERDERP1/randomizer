@@ -16,7 +16,7 @@ function displayRandomNumbers() {
        
         clearInterval(interval);
         if (count >= 35) {                  //og value: 25
-            intervalTime *= 2.5;            //og value: += 5
+            intervalTime += 2.5;            //og value: += 5
             console.log("count >= 35");
             if (count >= 45) {
                 intervalTime += 1.5;
