@@ -22,7 +22,7 @@ function displayRandomNumbers() {
                 return;
             }
         } else {
-            intervalTime *= 2.75;        //og value: += 1.75
+            intervalTime *= 1.4;        //og value: += 1.75
             console.log("else");
         }
         interval = setInterval(generateNumber, intervalTime);
