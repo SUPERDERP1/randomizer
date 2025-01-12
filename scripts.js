@@ -18,9 +18,12 @@ function displayRandomNumbers() {
         if (count >= 25) {
             intervalTime += 5;
             if (count >= 35) {
-                intervalTime += 8;
-                if (count = 45) {
-                    return;
+                intervalTime += 9;
+                if (count >= 40) {
+                    intervalTime += 12;
+                    if (count = 45) {
+                        return;
+                    }
                 }
             }
         } else {
