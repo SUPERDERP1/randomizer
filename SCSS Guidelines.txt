@@ -40,4 +40,5 @@ Example:
         }
     }
 }
+3| Define all animations (@keyframes) in the animation section (below /*ANIMATIONS*/)
 ===========================================================
