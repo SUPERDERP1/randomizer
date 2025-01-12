@@ -27,9 +27,13 @@ function displayRandomNumbers() {
     }
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function bgFade(){
     document.body.style.animation = "fade 2s cubic-bezier(0.06, 0.98, 0.41, 0.93) 0s 1";
-    document.body.style.animation = "";
+    sleep(2000).then(() => {document.body.style.animation = "";});
 }
 
 document.getElementById('randomize').addEventListener('click', displayRandomNumbers);
