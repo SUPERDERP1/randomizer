@@ -17,16 +17,16 @@ body {
   white-space: pre-line;
 }
 #container .content a:link {
-  color: rgb(100, 50, 100);
+  color: rgb(120, 70, 120);
   text-decoration: none;
 }
 #container .content a:visited {
-  color: rgb(100, 50, 100);
+  color: rgb(120, 70, 120);
   filter: brightness(85%);
   text-decoration: none;
 }
 #container .content a:hover {
-  color: rgb(100, 50, 100);
+  color: rgb(120, 70, 120);
   filter: hue-rotate(30deg) brightness(115%);
   text-decoration: underline;
 }
