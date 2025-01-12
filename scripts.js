@@ -1,5 +1,6 @@
 function displayRandomNumbers() {
     let count = 0;
+    let speed = 100;
     const generatedNumbers = new Set();
     const interval = setInterval(() => {
         let randomNumber;
@@ -10,10 +11,11 @@ function displayRandomNumbers() {
         generatedNumbers.add(randomNumber);
         console.log(randomNumber);
         count++;
+        speed -+ 1.5;
         if (count === 25) {
             clearInterval(interval);
         }
-    }, 100);
+    }, speed);
 }
 
 document.getElementById('randomize').addEventListener('click', displayRandomNumbers);
