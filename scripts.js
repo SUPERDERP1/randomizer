@@ -21,7 +21,7 @@ function displayRandomNumbers() {
                 return;
             }
         } else {
-            intervalTime += 3.75;
+            intervalTime += 5.75;
         }
         interval = setInterval(generateNumber, intervalTime);
     }
