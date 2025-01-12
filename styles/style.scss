@@ -5,6 +5,7 @@ $fontMain: Rubik;
 $fontBold: Rubik Mono One;
 // colors
 $colorOffWhite: rgb(215,215,215);
+$colorPurple: rgb(100,50,100);
 // animations
 $animTransition1: all 0.666s cubic-bezier(0.06, 0.98, 0.41, 0.93);
 
@@ -21,6 +22,23 @@ body {
         h1 {
             color: $colorOffWhite;
             font-family: $fontBold;
+        }
+        a:link {
+            color: $colorPurple;
+            text-decoration: none;
+        }
+        a:visited {
+            color: $colorPurple;
+            filter: brightness(85%);
+            text-decoration: none;
+        }
+        a:hover {
+            color: $colorPurple;
+            filter: hue-rotate(30deg) brightness(115%);
+            text-decoration: underline;
+        }
+        a:active {
+            filter: opacity(0%);
         }
         .buttonStyle {
             color: $colorOffWhite;
