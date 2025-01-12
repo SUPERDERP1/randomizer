@@ -21,12 +21,12 @@ function displayRandomNumbers() {
             if (count >= 45) {
                 intervalTime += 1.5;
                 console.log("count >= 40");
-                if (count = 49) {           //og value: 45
+                if (count = 50) {           //og value: 45
                     return;
                 }
             }
         } else {
-            intervalTime += 2.75;           //og value: 1.75
+            intervalTime *= 2.75;           //og value: 1.75
             console.log("else");
         }
         interval = setInterval(generateNumber, intervalTime);
