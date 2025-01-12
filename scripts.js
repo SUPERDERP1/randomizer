@@ -16,12 +16,12 @@ function displayRandomNumbers() {
        
         clearInterval(interval);
         if (count >= 45) {
-            intervalTime += 5;
+            intervalTime += 9;
             if (count = 65) {
                 return;
             }
         } else {
-            intervalTime += 1.75;
+            intervalTime += 3.75;
         }
         interval = setInterval(generateNumber, intervalTime);
     }
