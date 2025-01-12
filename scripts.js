@@ -22,7 +22,7 @@ function displayRandomNumbers() {
                 if (count >= 40) {
                     intervalTime += 12;
                     if (count >= 42) {
-                        intervalTime += 16;
+                        intervalTime += 20;
                         if (count = 45) {
                             return;
                         }
