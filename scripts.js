@@ -20,7 +20,7 @@ function displayRandomNumbers() {
             if (count >= 35) {
                 intervalTime += 9;
                 if (count >= 40) {
-                    intervalTime += 12;
+                    intervalTime += 15;
                     if (count >= 42) {
                         intervalTime += 20;
                         if (count = 45) {
