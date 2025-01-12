@@ -15,16 +15,16 @@ function displayRandomNumbers() {
         count++;
        
         clearInterval(interval);
-        if (count >= 25) {     
-            intervalTime += 9;
-            console.log("count >= 35");
+        if (count >= 25) {    
+            console.log("count >= 25"); 
+            intervalTime += 5;
             if (count = 45) {
-                console.log("finished");
+                console.log("completed");
                 return;
             }
         } else {
-            intervalTime += 1.75;
             console.log("else");
+            intervalTime += 1.75;
         }
         interval = setInterval(generateNumber, intervalTime);
     }
