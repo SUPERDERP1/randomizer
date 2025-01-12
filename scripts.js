@@ -17,8 +17,11 @@ function displayRandomNumbers() {
         clearInterval(interval);
         if (count >= 25) {
             intervalTime += 5;
-            if (count = 45) {
-                return;
+            if (count >= 35) {
+                intervalTime += 8;
+                if (count = 45) {
+                    return;
+                }
             }
         } else {
             intervalTime += 1.75;
