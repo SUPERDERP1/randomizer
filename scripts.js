@@ -21,8 +21,11 @@ function displayRandomNumbers() {
                 intervalTime += 9;
                 if (count >= 40) {
                     intervalTime += 12;
-                    if (count = 45) {
-                        return;
+                    if (count >= 42) {
+                        intervalTime += 16;
+                        if (count = 45) {
+                            return;
+                        }
                     }
                 }
             }
