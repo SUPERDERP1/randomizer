@@ -10,6 +10,7 @@ $animTransition1: all 0.666s cubic-bezier(0.06, 0.98, 0.41, 0.93);
 
 body {
     background-color: rgb(28,28,28);
+    transition: background-color 2s cubic-bezier(0.06, 0.98, 0.41, 0.93);
 }
 
 #container {

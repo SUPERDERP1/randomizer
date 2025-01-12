@@ -26,5 +26,9 @@ function displayRandomNumbers() {
         interval = setInterval(generateNumber, intervalTime);
     }
 }
-
+function bgFade(){
+    document.body.style.backgroundColor = '#fff';
+    document.body.style.color = '#000';
+}
 document.getElementById('randomize').addEventListener('click', displayRandomNumbers);
+document.getElementById('bgFade').addEventListener('click', bgFade);

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 body {
   background-color: rgb(28, 28, 28);
+  transition: background-color 2s cubic-bezier(0.06, 0.98, 0.41, 0.93);
 }
 
 #container {
