@@ -13,7 +13,7 @@ body {
   color: rgb(215, 215, 215);
   font-family: Rubik Mono One;
 }
-#container .content .randomizeButton {
+#container .content .buttonStyle {
   color: rgb(215, 215, 215);
   border: 3px outset rgba(235, 235, 235, 0.7);
   background-color: rgb(12, 12, 12);
@@ -21,7 +21,7 @@ body {
   padding: 10px 16px;
   transition: all 0.666s cubic-bezier(0.06, 0.98, 0.41, 0.93);
 }
-#container .content .randomizeButton:hover {
+#container .content .buttonStyle:hover {
   color: rgb(235, 235, 235);
   border: 3px inset rgba(235, 235, 235, 0.7);
   background-color: rgb(20, 20, 20);
