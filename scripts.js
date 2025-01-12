@@ -18,7 +18,7 @@ function displayRandomNumbers() {
             clearInterval(interval);
         } else {
             clearInterval(interval);
-            intervalTime -= 2.6;
+            intervalTime += 2.5;
             interval = setInterval(generateNumber, intervalTime);
         }
     }
