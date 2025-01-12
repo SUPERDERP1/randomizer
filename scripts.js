@@ -15,18 +15,18 @@ function displayRandomNumbers() {
         count++;
        
         clearInterval(interval);
-        if (count >= 35) {        //og value: 25
-            intervalTime *= 2.5;  //og value: += 5
+        if (count >= 35) {                  //og value: 25
+            intervalTime *= 2.5;            //og value: += 5
             console.log("count >= 35");
             if (count >= 40) {
                 intervalTime *= 1.5;
                 console.log("count >= 40");
-            }
-            if (count = 45) {     //og value: 45
-                return;
+                if (count = 45) {           //og value: 45
+                    return;
+                }
             }
         } else {
-            intervalTime += 2.75; //og value: 1.75
+            intervalTime += 2.75;           //og value: 1.75
             console.log("else");
         }
         interval = setInterval(generateNumber, intervalTime);
