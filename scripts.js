@@ -14,13 +14,16 @@ function displayRandomNumbers() {
         console.log(randomNumber);
         count++;
        
-        if (count === 25) {
-            clearInterval(interval);
+        clearInterval(interval);
+        if (count >= 25) {
+            intervalTime += 5;
+            if (count = 45) {
+                return;
+            }
         } else {
-            clearInterval(interval);
-            intervalTime += 3.25;
-            interval = setInterval(generateNumber, intervalTime);
+            intervalTime += 1.75;
         }
+        interval = setInterval(generateNumber, intervalTime);
     }
 }
 
