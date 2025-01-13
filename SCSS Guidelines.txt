@@ -23,14 +23,14 @@ EDITING
 General Guidelines
 1| Unless absolulely required, define classes in 
 #container {
-    .content {
+    .divName {
 
     }
 }
 2| Edits that apply to the whole class must come before defining children
 Example: 
 #container {
-    .content {
+    .divName {
         color: $colorRed;
         font-size: 18px;
         h1 {
