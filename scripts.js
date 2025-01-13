@@ -62,6 +62,7 @@ function displayRandomNumbers() {
                             if (randomTitleObj.rarity > 4) {bgFade();}
                             if (!ownedTitles.includes(randomTitle)) {
                                 ownedTitles.push(randomTitle);
+                                console.log(randomTitle + " " + randomTitleObj.rarity);
                             }
                             console.log(ownedTitles);
                             clearInterval(interval);
