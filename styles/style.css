@@ -9,6 +9,11 @@ body {
   font-family: Rubik;
   font-size: 16px;
 }
+#container .content {
+  /*ELEMENTS*/
+  /*LINKS*/
+  /*CLASSES AND IDS*/
+}
 #container .content h1 {
   color: rgb(215, 215, 215);
   font-family: Rubik Mono One;
@@ -47,7 +52,15 @@ body {
   border: 3px inset rgba(235, 235, 235, 0.7);
   background-color: rgb(20, 20, 20);
 }
+#container .content #titleDisplay {
+  text-align: center;
+  font-size: 10em;
+  animation: titleBounce 4s ease-in infinite;
+  -webkit-text-stroke: #fff 2px;
+  color: #770 !important;
+}
 
+/*ANIMATIONS*/
 @keyframes fade {
   0% {
     background-color: rgb(28, 28, 28);
@@ -57,6 +70,23 @@ body {
   }
   100% {
     background-color: rgb(28, 28, 28);
+  }
+}
+@keyframes titleBounce {
+  0% {
+    transform: rotate(2.5deg) scale(1.05);
+  }
+  25% {
+    transform: rotate(0deg) scale(0.95);
+  }
+  50% {
+    transform: rotate(-2.5deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(0deg) scale(0.95);
+  }
+  100% {
+    transform: rotate(2.5deg) scale(1.05);
   }
 }
 

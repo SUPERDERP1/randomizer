@@ -19,6 +19,7 @@ body {
     font-family: $fontMain;
     font-size: 16px;
     .content {
+        /*ELEMENTS*/
         h1 {
             color: $colorOffWhite;
             font-family: $fontBold;
@@ -26,6 +27,7 @@ body {
         p {
             white-space: pre-line;
         }
+        /*LINKS*/
         a:link {
             color: $colorPurple;
             text-decoration: none;
@@ -43,6 +45,7 @@ body {
         a:active {
             filter: opacity(0%);
         }
+        /*CLASSES AND IDS*/
         .buttonStyle {
             color: $colorOffWhite;
             border: 3px outset rgba(235,235,235,0.7);
@@ -57,11 +60,38 @@ body {
             border: 3px inset rgba(235,235,235,0.7);
             background-color: rgb(20,20,20);
         }
+        #titleDisplay {
+            text-align:center;
+            font-size:10em;
+            animation: titleBounce 4s ease-in infinite;
+            -webkit-text-stroke: #fff 2px;
+            color:#770 !important;
+        }
     }
 }
+
+/*ANIMATIONS*/
 
 @keyframes fade {
     0% {background-color: rgb(28,28,28);}
     50% {background-color: rgb(255,255,255);}
     100% {background-color: rgb(28,28,28);}
+}
+
+@keyframes titleBounce {
+    0% {
+      transform:rotate(2.5deg) scale(1.05);
+    }
+    25% {
+      transform:rotate(0deg) scale(0.95);
+    }
+    50% {
+      transform:rotate(-2.5deg) scale(1.05);
+    }
+    75% {
+      transform:rotate(0deg) scale(0.95);
+    }
+    100% {
+      transform:rotate(2.5deg) scale(1.05);
+    }
 }
