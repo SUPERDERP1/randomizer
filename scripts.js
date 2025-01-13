@@ -40,13 +40,15 @@ function displayRandomNumbers() {
     function generateNumber() {
         let randomNumber;
         do {
-            randomNumber = Math.floor(Math.random() * 100); // Generate a random number between 0 and 10
+            randomNumber = Math.floor(Math.random() * 100); // Generate a random number between 0 and 100 (this is left here to iterate things, the number isnt used)
         } while (generatedNumbers.has(randomNumber));
-        randomTitleObj = weightedRandomSelection(titles);
-        randomTitle = randomTitleObj.name;
         generatedNumbers.add(randomNumber);
-        console.log(randomTitle + " " + randomTitleObj.rarity);
-        document.getElementById('titleDisplay').innerHTML = randomTitle;
+
+        randomTitleObj = weightedRandomSelection(titles); /*generates a title based on rarities*/
+        randomTitle = randomTitleObj.name;
+
+        console.log(randomTitle + " " + randomTitleObj.rarity); //debugging
+        document.getElementById('titleDisplay').innerHTML = randomTitle; //displaying the selected title on screen
         count++;
        
         clearInterval(interval);
@@ -59,7 +61,7 @@ function displayRandomNumbers() {
                     if (count >= 42) {
                         intervalTime += 20;
                         if (count >= 45) {
-                            if (randomTitleObj.rarity > 4) {bgFade();}
+                            if (randomTitleObj.rarity > 4) {bgFade();} 
                             if (!ownedTitles.includes(randomTitle)) {
                                 ownedTitles.push(randomTitle);
                                 console.log(randomTitle + " " + randomTitleObj.rarity);
