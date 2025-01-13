@@ -1,3 +1,4 @@
+ownedTitles = [common];
 function weightedRandomSelection(items) {
     // Calculate the cumulative sum of probabilities
     let totalProbability = 0;
@@ -25,8 +26,8 @@ function displayRandomNumbers() {
     const generatedNumbers = new Set();
     let titles = [
         {name:'common', rarity:1}, 
-        {name:'uncommon', rarity:3}, 
-        {name:'rare', rarity:10}, 
+        {name:'uncommon', rarity:2}, 
+        {name:'rare', rarity:5}, 
         {name:'mythic', rarity:15}, 
         {name:'lucky', rarity:25}, 
         {name:'good', rarity:12}, 
@@ -57,6 +58,10 @@ function displayRandomNumbers() {
                     if (count >= 42) {
                         intervalTime += 20;
                         if (count >= 45) {
+                            if (!ownedTitles.includes(randomTitle)) {
+                                ownedTitles.push(randomTitle);
+                            }
+                            console.log(ownedTitles);
                             clearInterval(interval);
                             return;
                         }
