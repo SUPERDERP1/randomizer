@@ -18,8 +18,8 @@ nav {
     position: sticky;  
     top: 0;
     width: 100%;
-    background-color: #252525;
-    border-bottom: 2px solid #454545;
+    background-color: rgb(37,37,37);
+    border-bottom: 2px solid rgb(69,69,69);
     padding: 6px 0px 6px;
     z-index: 2;
     li {
@@ -27,7 +27,9 @@ nav {
         font-style: bold;
         padding-right: 5%;
     }
-    li:hover {
+}
+nav:hover {
+    li {
         font-size: 18px;
     }
 }
