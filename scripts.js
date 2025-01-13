@@ -14,7 +14,7 @@ function weightedRandomSelection(items) {
     for (let i = 0; i < items.length; i++) {
         cumulativeProbability += 1 / items[i].rarity;
         if (randomValue < cumulativeProbability) {
-            return items[i].name;
+            return items[i];
         }
     }
 }
@@ -42,7 +42,8 @@ function displayRandomNumbers() {
         do {
             randomNumber = Math.floor(Math.random() * 100); // Generate a random number between 0 and 10
         } while (generatedNumbers.has(randomNumber));
-        randomTitle = weightedRandomSelection(titles);
+        randomTitleObj = weightedRandomSelection(titles);
+        randomTitle = randomTitleObj.name;
         generatedNumbers.add(randomNumber);
         console.log(randomTitle + count);
         document.getElementById('titleDisplay').innerHTML = randomTitle;
@@ -58,6 +59,7 @@ function displayRandomNumbers() {
                     if (count >= 42) {
                         intervalTime += 20;
                         if (count >= 45) {
+                            if (randomTitleObj.rarity > 4) {bgFade}
                             if (!ownedTitles.includes(randomTitle)) {
                                 ownedTitles.push(randomTitle);
                             }
@@ -80,8 +82,8 @@ function sleep(ms) {
 }
 
 function bgFade(){
-    document.body.style.animation = "fade 4s cubic-bezier(0.06, 0.98, 0.41, 0.93) 0s 1";
-    sleep(4500).then(() => {document.body.style.animation = "";});
+    document.body.style.animation = "fade 2s ease-in-out 0s 1";
+    sleep(2500).then(() => {document.body.style.animation = "";});
 }
 
 document.getElementById('randomize').addEventListener('click', displayRandomNumbers);
