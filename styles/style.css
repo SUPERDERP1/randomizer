@@ -86,19 +86,19 @@ nav li {
 }
 @keyframes titleBounce {
   0% {
-    transform: rotate(2.5deg);
+    transform: rotate(2.5deg) scale(1.05);
   }
   25% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(0.9);
   }
   50% {
-    transform: rotate(-2.5deg);
+    transform: rotate(-2.5deg) scale(1.05);
   }
   75% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(0.9);
   }
   100% {
-    transform: rotate(2.5deg);
+    transform: rotate(2.5deg) scale(1.05);
   }
 }
 @keyframes pop {
