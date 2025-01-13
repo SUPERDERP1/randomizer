@@ -19,7 +19,6 @@ body {
     font-family: $fontMain;
     font-size: 16px;
     .content {
-        /*ELEMENTS*/
         h1 {
             color: $colorOffWhite;
             font-family: $fontBold;
@@ -27,7 +26,6 @@ body {
         p {
             white-space: pre-line;
         }
-        /*LINKS*/
         a:link {
             color: $colorPurple;
             text-decoration: none;
@@ -45,7 +43,6 @@ body {
         a:active {
             filter: opacity(0%);
         }
-        /*CLASSES AND IDS*/
         .buttonStyle {
             color: $colorOffWhite;
             border: 3px outset rgba(235,235,235,0.7);
@@ -58,7 +55,7 @@ body {
         .buttonStyle:hover {
             color: rgb(235,235,235);
             border: 3px inset rgba(235,235,235,0.7);
-            background-color: rgb(20,20,20);
+            background-color: rgb(12,12,12);
         }
         #titleDisplay {
             text-align:center;
@@ -73,8 +70,8 @@ body {
 /*ANIMATIONS*/
 
 @keyframes fade {
-    0% {background-color: rgb(28,28,28);}
-    50% {background-color: rgb(255,255,255);}
+    0%   {background-color: rgb(28,28,28);}
+    50%  {background-color: rgb(255,255,255);}
     100% {background-color: rgb(28,28,28);}
 }
 

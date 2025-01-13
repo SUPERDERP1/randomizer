@@ -9,36 +9,47 @@ body {
   font-family: Rubik;
   font-size: 16px;
 }
-#container .content {
-  /*ELEMENTS*/
-  /*LINKS*/
-  /*CLASSES AND IDS*/
-}
 #container .content h1 {
   color: rgb(215, 215, 215);
   font-family: Rubik Mono One;
 }
-#container .content p {
+#container p {
   white-space: pre-line;
 }
-#container .content a:link {
+#container a:link {
   color: rgb(120, 70, 120);
   text-decoration: none;
 }
-#container .content a:visited {
+#container a:visited {
   color: rgb(120, 70, 120);
   filter: brightness(85%);
   text-decoration: none;
 }
-#container .content a:hover {
+#container a:hover {
   color: rgb(120, 70, 120);
   filter: hue-rotate(30deg) brightness(115%);
   text-decoration: underline;
 }
-#container .content a:active {
+#container a:active {
   filter: opacity(0%);
 }
-#container .content .buttonStyle {
+#container nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgb(37, 37, 37);
+  border-bottom: 2px solid rgb(69, 69, 69);
+  padding: 6px 0px 6px;
+  z-index: 2;
+}
+#container nav li {
+  padding-right: 5%;
+  font-style: bold;
+}
+#container nav li:hover {
+  font-size: 18px;
+}
+#container .gameplay .buttonStyle {
   color: rgb(215, 215, 215);
   border: 3px outset rgba(235, 235, 235, 0.7);
   background-color: rgb(12, 12, 12);
@@ -47,10 +58,10 @@ body {
   margin: 8px;
   transition: all 0.666s cubic-bezier(0.06, 0.98, 0.41, 0.93);
 }
-#container .content .buttonStyle:hover {
+#container .gameplay .buttonStyle:hover {
   color: rgb(235, 235, 235);
   border: 3px inset rgba(235, 235, 235, 0.7);
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(12, 12, 12);
 }
 #container .content #titleDisplay {
   text-align: center;
