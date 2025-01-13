@@ -21,10 +21,6 @@ nav li {
   padding-right: 5%;
 }
 
-nav:hover li {
-  font-size: 18px;
-}
-
 #container {
   color: rgb(215, 215, 215);
   font-family: Rubik;
