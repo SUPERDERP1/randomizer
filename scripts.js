@@ -45,7 +45,7 @@ function displayRandomNumbers() {
         randomTitleObj = weightedRandomSelection(titles);
         randomTitle = randomTitleObj.name;
         generatedNumbers.add(randomNumber);
-        console.log(randomTitle + count);
+        console.log(randomTitle + " " + randomTitleObj.rarity);
         document.getElementById('titleDisplay').innerHTML = randomTitle;
         count++;
        
@@ -59,7 +59,7 @@ function displayRandomNumbers() {
                     if (count >= 42) {
                         intervalTime += 20;
                         if (count >= 45) {
-                            if (randomTitleObj.rarity > 4) {bgFade}
+                            if (randomTitleObj.rarity > 4) {bgFade();}
                             if (!ownedTitles.includes(randomTitle)) {
                                 ownedTitles.push(randomTitle);
                             }
