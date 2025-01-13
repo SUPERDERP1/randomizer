@@ -42,6 +42,7 @@ function displayRandomNumbers() {
         do {
             randomNumber = Math.floor(Math.random() * 100); // Generate a random number between 0 and 100 (this is left here to iterate things, the number isnt used)
         } while (generatedNumbers.has(randomNumber));
+        document.getElementById('titleDisplay').style.animation = 'titleBounce 4s ease-in infinite;'
         generatedNumbers.add(randomNumber);
 
         randomTitleObj = weightedRandomSelection(titles); /*generates a title based on rarities*/
@@ -49,6 +50,7 @@ function displayRandomNumbers() {
 
         console.log(randomTitle + " " + randomTitleObj.rarity); //debugging
         document.getElementById('titleDisplay').innerHTML = randomTitle; //displaying the selected title on screen
+        document.getElementById('titleDisplay').style.animation = 'titleBounce 4s ease-in infinite, pop 0.1s ease 1;'
         count++;
        
         clearInterval(interval);
