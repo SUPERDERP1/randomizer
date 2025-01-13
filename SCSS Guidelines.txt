@@ -1,5 +1,7 @@
 These are the guidelines for editing SASS/SCSS for this project
 Written by 5Stygian, Design Lead
+The Design Lead is the only one that can edit these guidelines
+You can suggest edits to these guidelines to the Design Lead
 
 VARIABLES
 ===========================================================
@@ -14,9 +16,6 @@ Example:
 // color
 $colorRed: rgb(255,0,0);
 $colorBlue: rgb(0,0,255);
-
-Defining Guidelines
-1| When defining colors, rgb() is preferred but you can use any color format  
 ===========================================================
 
 EDITING 
@@ -40,5 +39,6 @@ Example:
         }
     }
 }
-3| Define all animations (@keyframes) in the animation section (below /*ANIMATIONS*/)
+Defining Guidelines
+1| When defining colors, rgb() is preferred but feel free to use any color format
 ===========================================================
