@@ -1,4 +1,4 @@
-ownedTitles = [common];
+ownedTitles = ['common'];
 function weightedRandomSelection(items) {
     // Calculate the cumulative sum of probabilities
     let totalProbability = 0;
