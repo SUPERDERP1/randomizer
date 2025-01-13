@@ -14,35 +14,53 @@ body {
     transition: background-color 2s cubic-bezier(0.06, 0.98, 0.41, 0.93);
 }
 
+nav {
+    position: sticky;  
+    top: 0;
+    width: 100%;
+    background-color: #252525;
+    border-bottom: 2px solid #454545;
+    padding: 6px 0px 6px;
+    z-index: 2;
+    li {
+        display: block;
+        font-style: bold;
+        padding-right: 5%;
+    }
+    li:hover {
+        font-size: 18px;
+    }
+}
+
 #container {
     color: $colorOffWhite;
     font-family: $fontMain;
     font-size: 16px;
-    .content {
-        h1 {
-            color: $colorOffWhite;
-            font-family: $fontBold;
-        }
-        p {
-            white-space: pre-line;
-        }
-        a:link {
-            color: $colorPurple;
-            text-decoration: none;
-        }
-        a:visited {
-            color: $colorPurple;
-            filter: brightness(85%);
-            text-decoration: none;
-        }
-        a:hover {
-            color: $colorPurple;
-            filter: hue-rotate(30deg) brightness(115%);
-            text-decoration: underline;
-        }
-        a:active {
-            filter: opacity(0%);
-        }
+    h1 {
+        color: $colorOffWhite;
+        font-family: $fontBold;
+    }
+    p {
+        white-space: pre-line;
+    }
+    a:link {
+        color: $colorPurple;
+        text-decoration: none;
+    }
+    a:visited {
+        color: $colorPurple;
+        filter: brightness(85%);
+        text-decoration: none;
+    }
+    a:hover {
+        color: $colorPurple;
+        filter: hue-rotate(30deg) brightness(115%);
+        text-decoration: underline;
+    }
+    a:active {
+        filter: opacity(0%);
+    }
+    .gameplay {
         .buttonStyle {
             color: $colorOffWhite;
             border: 3px outset rgba(235,235,235,0.7);

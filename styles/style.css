@@ -4,12 +4,30 @@ body {
   transition: background-color 2s cubic-bezier(0.06, 0.98, 0.41, 0.93);
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #252525;
+  border-bottom: 2px solid #454545;
+  padding: 6px 0px 6px;
+  z-index: 2;
+}
+nav li {
+  display: block;
+  font-style: bold;
+  padding-right: 5%;
+}
+nav li:hover {
+  font-size: 18px;
+}
+
 #container {
   color: rgb(215, 215, 215);
   font-family: Rubik;
   font-size: 16px;
 }
-#container .content h1 {
+#container h1 {
   color: rgb(215, 215, 215);
   font-family: Rubik Mono One;
 }
@@ -33,22 +51,6 @@ body {
 #container a:active {
   filter: opacity(0%);
 }
-#container nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: rgb(37, 37, 37);
-  border-bottom: 2px solid rgb(69, 69, 69);
-  padding: 6px 0px 6px;
-  z-index: 2;
-}
-#container nav li {
-  padding-right: 5%;
-  font-style: bold;
-}
-#container nav li:hover {
-  font-size: 18px;
-}
 #container .gameplay .buttonStyle {
   color: rgb(215, 215, 215);
   border: 3px outset rgba(235, 235, 235, 0.7);
@@ -63,7 +65,7 @@ body {
   border: 3px inset rgba(235, 235, 235, 0.7);
   background-color: rgb(12, 12, 12);
 }
-#container .content #titleDisplay {
+#container .gameplay #titleDisplay {
   text-align: center;
   font-size: 10em;
   animation: titleBounce 4s ease-in infinite;
