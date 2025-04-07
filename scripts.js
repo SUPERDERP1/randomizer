@@ -25,16 +25,16 @@ function displayRandomNumbers() {
     let interval = setInterval(generateNumber, intervalTime);
     const generatedNumbers = new Set();
     let titles = [
-        {name:'common', rarity:1}, 
-        {name:'uncommon', rarity:2}, 
-        {name:'rare', rarity:5}, 
-        {name:'mythic', rarity:15}, 
-        {name:'lucky', rarity:25}, 
-        {name:'good', rarity:12}, 
-        {name:'gilded', rarity:25}, 
-        {name:'divine', rarity:35}, 
-        {name:'legendary', rarity:100}, 
-        {name:'quartz', rarity:40}
+        {name:'common', rarity:1, color:'white'}, 
+        {name:'uncommon', rarity:2, color:'green'}, 
+        {name:'rare', rarity:5, color:'blue'}, 
+        {name:'mythic', rarity:15, color:'purple'}, 
+        {name:'lucky', rarity:25, color:'pink'}, 
+        {name:'good', rarity:12, color:'light blue'}, 
+        {name:'gilded', rarity:25, color:'lime'}, 
+        {name:'divine', rarity:35, color:'red'}, 
+        {name:'legendary', rarity:100, color:'yellow'}, 
+        {name:'quartz', rarity:40, color:'silver'}
     ];
 
     function generateNumber() {
@@ -47,10 +47,12 @@ function displayRandomNumbers() {
 
         randomTitleObj = weightedRandomSelection(titles); /*generates a title based on rarities*/
         randomTitle = randomTitleObj.name;
+        randomColor = randomTitleObj.color;
 
         console.log(randomTitle + " " + randomTitleObj.rarity); //debugging
         document.getElementById('titleDisplay').innerHTML = randomTitle; //displaying the selected title on screen
         document.getElementById('titleDisplay').style.animation = 'titleBounce 4s ease-in infinite, pop 0.1s ease infinite;';
+        document.getElementById('titleDisplay').style.color = randomColor;
         count++;
        
         clearInterval(interval);
