@@ -51,8 +51,8 @@ function displayRandomNumbers() {
 
         console.log(randomTitle + " " + randomTitleObj.rarity); //debugging
         document.getElementById('titleDisplay').innerHTML = randomTitle; //displaying the selected title on screen
-        document.getElementById('titleDisplay').style.animation = 'titleBounce 4s ease-in infinite, pop 0.1s ease infinite;';
         document.getElementById('titleDisplay').style.color = randomColor;
+        document.getElementById('titleDisplay').style.animation = 'titleBounce 4s ease-in infinite, pop 0.1s ease infinite;';
         count++;
        
         clearInterval(interval);
