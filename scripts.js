@@ -1,15 +1,12 @@
 ownedTitles = ['common'];
 function weightedRandomSelection(items) {
-    // Calculate the cumulative sum of probabilities
     let totalProbability = 0;
     for (let i = 0; i < items.length; i++) {
         totalProbability += 1 / items[i].rarity;
     }
 
-    // Generate a random number between 0 and 1
     let randomValue = Math.random() * totalProbability;
 
-    // Select the item based on the random number
     let cumulativeProbability = 0;
     for (let i = 0; i < items.length; i++) {
         cumulativeProbability += 1 / items[i].rarity;
@@ -22,67 +19,81 @@ function weightedRandomSelection(items) {
 function displayRandomNumbers() {
     let count = 0;
     let intervalTime = 100;
-    let interval = setInterval(generateNumber, intervalTime);
     const generatedNumbers = new Set();
-    let titles = [
-        {name:'common', rarity:1, color:'white'}, 
-        {name:'uncommon', rarity:2, color:'green'}, 
-        {name:'rare', rarity:5, color:'blue'}, 
-        {name:'mythic', rarity:15, color:'purple'}, 
-        {name:'lucky', rarity:25, color:'pink'}, 
-        {name:'good', rarity:12, color:'light blue'}, 
-        {name:'gilded', rarity:25, color:'lime'}, 
-        {name:'divine', rarity:35, color:'red'}, 
-        {name:'legendary', rarity:100, color:'yellow'}, 
-        {name:'quartz', rarity:40, color:'silver'}
+    let previousTitle = null; 
+    const titles = [
+        { name: 'common', rarity: 1, color: '#d3d3d3' }, // Light Gray
+        { name: 'uncommon', rarity: 2, color: '#90ee90' }, // Light Green
+        { name: 'rare', rarity: 5, color: '#add8e6' }, // Light Blue
+        { name: 'mythic', rarity: 15, color: '#dda0dd' }, // Plum
+        { name: 'lucky', rarity: 25, color: '#ffb6c1' }, // Light Pink
+        { name: 'good', rarity: 12, color: '#87ceeb' }, // Sky Blue
+        { name: 'gilded', rarity: 25, color: '#98fb98' }, // Pale Green
+        { name: 'divine', rarity: 35, color: '#f08080' }, // Light Coral
+        { name: 'legendary', rarity: 100, color: '#fdfd96' }, // Pastel Yellow
+        { name: 'quartz', rarity: 40, color: '#c0c0c0' } // Silver
     ];
 
     function generateNumber() {
         let randomNumber;
         do {
-            randomNumber = Math.floor(Math.random() * 100); // Generate a random number between 0 and 100 (this is left here to iterate things, the number isnt used)
+            randomNumber = Math.floor(Math.random() * 100);
         } while (generatedNumbers.has(randomNumber));
-        
+
         generatedNumbers.add(randomNumber);
 
-        randomTitleObj = weightedRandomSelection(titles); /*generates a title based on rarities*/
-        randomTitle = randomTitleObj.name;
-        randomColor = randomTitleObj.color;
+        let randomTitleObj;
+        do {
+            randomTitleObj = weightedRandomSelection(titles);
+        } while (randomTitleObj.name === previousTitle); 
 
-        console.log(randomTitle + " " + randomTitleObj.rarity); //debugging
-        document.getElementById('titleDisplay').innerHTML = randomTitle; //displaying the selected title on screen
-        document.getElementById('titleDisplay').style.color = randomColor;
-        document.getElementById('titleDisplay').style.animation = 'titleBounce 4s ease-in infinite, pop 0.1s ease infinite;';
+        previousTitle = randomTitleObj.name; 
+        const randomTitle = randomTitleObj.name;
+        const randomColor = randomTitleObj.color;
+
+        console.log(`${randomTitle} (${randomTitleObj.rarity}), ${randomColor}`);
+        const titleDisplay = document.getElementById('titleDisplay');
+
+        titleDisplay.innerHTML = randomTitle;
+        titleDisplay.style.setProperty('color', randomColor, 'important'); 
+
+        titleDisplay.classList.remove('animate');
+        void titleDisplay.offsetWidth; 
+        titleDisplay.classList.add('animate'); 
+        setTimeout(() => {
+            titleDisplay.classList.remove('animate');
+        }, 500);
+
         count++;
-       
-        clearInterval(interval);
-        if (count >= 25) {
-            intervalTime += 5;
-            if (count >= 35) {
-                intervalTime += 9;
-                if (count >= 40) {
-                    intervalTime += 15;
-                    if (count >= 42) {
-                        intervalTime += 20;
-                        if (count >= 45) {
-                            if (randomTitleObj.rarity > 4) {bgFade();} 
-                            if (!ownedTitles.includes(randomTitle)) {
-                                ownedTitles.push(randomTitle);
-                                console.log(randomTitle + " " + randomTitleObj.rarity);
-                            }
-                            document.getElementById('titleDisplay').style.animation = 'titleBounce 4s ease-in infinite;';
-                            console.log(ownedTitles);
-                            clearInterval(interval);
-                            return;
-                        }
-                    }
-                }
+
+        if (count >= 45) {
+            if (randomTitleObj.rarity > 4) {
+                bgFade();
             }
+            if (!ownedTitles.includes(randomTitle)) {
+                ownedTitles.push(randomTitle);
+                console.log(`${randomTitle} (${randomTitleObj.rarity})`);
+            }
+            console.log(ownedTitles);
+            return; 
+        }
+
+        if (count >= 42) {
+            intervalTime += 20;
+        } else if (count >= 40) {
+            intervalTime += 15;
+        } else if (count >= 35) {
+            intervalTime += 9;
+        } else if (count >= 25) {
+            intervalTime += 5;
         } else {
             intervalTime += 1.75;
         }
-        interval = setInterval(generateNumber, intervalTime);
+
+        setTimeout(generateNumber, intervalTime); 
     }
+
+    generateNumber(); 
 }
 
 function sleep(ms) {
@@ -96,54 +107,3 @@ function bgFade(){
 
 document.getElementById('randomize').addEventListener('click', displayRandomNumbers);
 document.getElementById('bgFade').addEventListener('click', bgFade);
-
-/*keeping this in case my code doesnt work*/
-/*function displayRandomNumbers() {
-    let count = 0;
-    let intervalTime = 100;
-    let interval = setInterval(generateNumber, intervalTime);
-    const generatedNumbers = new Set();
-
-    function generateNumber() {
-        let randomNumber;
-        do {
-            randomNumber = Math.floor(Math.random() * 101); // Generate a random number between 0 and 100
-        } while (generatedNumbers.has(randomNumber));
-        
-        generatedNumbers.add(randomNumber);
-        console.log(randomNumber);
-        count++;
-       
-        clearInterval(interval);
-        if (count >= 25) {
-            intervalTime += 5;
-            if (count >= 35) {
-                intervalTime += 9;
-                if (count >= 40) {
-                    intervalTime += 15;
-                    if (count >= 42) {
-                        intervalTime += 20;
-                        if (count = 45) {
-                            return;
-                        }
-                    }
-                }
-            }
-        } else {
-            intervalTime += 1.75;
-        }
-        interval = setInterval(generateNumber, intervalTime);
-    }
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function bgFade(){
-    document.body.style.animation = "fade 4s cubic-bezier(0.06, 0.98, 0.41, 0.93) 0s 1";
-    sleep(4500).then(() => {document.body.style.animation = "";});
-}
-
-document.getElementById('randomize').addEventListener('click', displayRandomNumbers);
-document.getElementById('bgFade').addEventListener('click', bgFade);*/
